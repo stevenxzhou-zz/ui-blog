@@ -1,0 +1,33 @@
+<!-- 
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Main landing page of the blog.
+ */
+-->
+
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Blog</title>
+        <base href="/app">
+        <link href="/app/css/trix.css" rel="stylesheet" type="text/css"/>
+        <link href="/app/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/app/css/ngToast.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/app/css/ngToast-animations.min.css" rel="stylesheet" type="text/css"/>
+        <link href="/app/css/app.css" rel="stylesheet" type="text/css"/>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/trix/0.9.2/trix.js"></script>
+	</head>
+	<body ng-app="">
+        <toast></toast>
+        <blog-header></blog-header>
+        <hr>
+		<ng-view></ng-view>
+        <hr>
+        <footer class="row">
+            <p class="col-md-3 center-block">Steven's Blog - 2016 All Rights Reserved</p>
+        </footer>
+  	</body>
+    <script src="app/js/require.js" data-main="/app/main"></script>
+</html>

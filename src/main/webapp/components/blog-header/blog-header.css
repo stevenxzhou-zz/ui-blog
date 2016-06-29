@@ -1,0 +1,11 @@
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Post header directive css.
+ */
+
+header .jumbotron {
+	padding-bottom: 0;
+	margin-bottom: 0;
+	background-color: white;
+}

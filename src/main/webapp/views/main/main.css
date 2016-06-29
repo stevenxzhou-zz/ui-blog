@@ -1,0 +1,18 @@
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: css file for main section with list of posts.
+ */
+
+#posts-list .panel-title {
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.pager .previous button {
+	float: left;
+}
+
+.pager .next button {
+	float: right;
+}

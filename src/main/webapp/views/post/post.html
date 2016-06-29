@@ -1,0 +1,28 @@
+<!--
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Full post page html.
+ */
+-->
+
+<div class="row">
+	<div id="post-page" class="col-md-8 center-block">
+		<div class="panel panel-primary">
+			<div class="panel-heading row">
+				<div class="panel-title col-md-11">{{postCtrl.post.title}}</div>
+			</div>
+			<div class="panel-body">
+				<span>{{postCtrl.post.timestamp | amUtc | amLocal |  amDateFormat:'MM-DD-YYYY HH:mm:ss'}}</span>
+				<span>by {{postCtrl.username}}</span>
+				<div>
+					<span ng-bind-html="postCtrl.post.text"></span>
+				</div>
+			</div>
+			<div class="panel-footer row">
+				<a href="/app">Back</a>
+				<a ng-click="postCtrl.postEditDialog(postCtrl.post)">Edit</a>
+			</div>
+		</div>
+	</div>
+</div>

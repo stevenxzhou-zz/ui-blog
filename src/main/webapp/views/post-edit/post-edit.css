@@ -1,0 +1,40 @@
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Post edit modal css.
+ */
+
+#post-edit input {
+	margin-bottom: 5px !important;
+}
+
+#post-edit .input-group{
+	display: flex;
+	max-width: 768px;
+}
+
+.modal-dialog {
+	max-width: 700px;
+}
+
+@media (min-width: 1028px) {
+
+	.modal-dialog textarea {
+		height: 400px !important;
+	}
+}
+
+@media (max-width: 1028px) {
+
+	.modal-dialog textarea {
+		height: 250px !important;
+	}
+}
+
+@media (max-width: 768px) {
+
+	.modal-dialog textarea {
+		max-width: 768px !important;
+		height: 150px !important;
+	}
+}

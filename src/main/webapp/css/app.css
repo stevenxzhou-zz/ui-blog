@@ -1,0 +1,44 @@
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Centralized css file.
+ */
+
+@import url("/app/views/main/main.css");
+@import url("/app/views/post/post.css");
+@import url("/app/views/post-edit/post-edit.css");
+@import url("/app/components/blog-header/blog-header.css");
+
+body a {
+	cursor: pointer;
+}
+
+body .center-block {
+	float: none;
+}
+
+.panel-body {
+	overflow-wrap: break-word;
+}
+
+.panel .row {
+	margin-right: 0;
+	margin-left: 0;
+}
+
+.panel-heading {
+	padding: 10px 0 !important;
+}
+
+.panel-heading a {
+	color: white;
+	font-size: 12pt;
+	float: right;
+}
+
+.panel-heading a:hover {
+	color: black;
+}
+
+
+

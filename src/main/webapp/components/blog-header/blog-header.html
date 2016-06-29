@@ -1,0 +1,18 @@
+<!-- 
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Post header directive html.
+ */
+-->
+
+<header class="row">
+    <div class="col-md-8 center-block">
+        <div class="jumbotron">
+          <h1>{{blogHeaderCtrl.username}}'s Blog</h1>
+          <p>{{blogHeaderCtrl.description}}</p>
+          <!-- The following buttons should only be seen by the owner of the blog after login. -->
+          <p><a class="btn btn-primary btn-lg" role="button" ng-click="blogHeaderCtrl.postNewDialog()">Post New</a>  <a class="btn btn-primary btn-lg" role="button" ng-click="blogHeaderCtrl.deleteAll()" confirm="Are you sure to delete all posts?">Delete All</a></p>
+        </div>
+    </div>
+</header>

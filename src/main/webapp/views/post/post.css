@@ -1,0 +1,9 @@
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Full post page css.
+ */
+
+#post-page .panel-title {
+	overflow-wrap: break-word;
+}

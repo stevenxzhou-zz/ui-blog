@@ -1,0 +1,49 @@
+<!-- 
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Main section with lists of posts.
+ */
+-->
+
+<div class="row">
+	<div id="posts-list" class="col-md-8 center-block">
+		<div ng-if="mainCtrl.hasPosts()">
+			<div ng-repeat="post in mainCtrl.pageContent | limitTo: mainCtrl.pageSize">
+				<div class="panel panel-primary">
+					<div class="panel-heading row">
+						<div class="panel-title col-md-12">
+							{{post.title}}
+							<!--  
+							<a ng-click="mainCtrl.remove(post.id, $index)" class="remove-post"><span class="glyphicon glyphicon-remove"></span></a>
+							-->
+						</div>
+					</div>
+					<div class="panel-body">
+						<span am-time-ago="post.timestamp"></span>
+						<span>by {{mainCtrl.username}}</span>
+						<div>
+							<span ng-bind-html="post.text | limitTo:500"></span>
+							<div ng-if="post.text.length > 500">
+								<a href="/app/post/{{post.id}}">...See More</a>
+							</div>
+						</div>
+					</div>
+					<div class="panel-footer row">
+						<a ng-click="mainCtrl.remove(post.id, $index)" confirm="Are you sure to delete this post?" class="remove-post">Delete</a>
+						<a ng-click="mainCtrl.postEditDialog(post)">Edit</a>
+					</div>
+				</div>
+			</div>
+			<nav>
+			  <ul class="pager">
+			    <li class="previous"><button type="button" ng-disabled="mainCtrl.currentPage == 0" ng-click="mainCtrl.pagePrev()" class="btn btn-default">&larr;Newer</button></li>
+			    <li class="next"><button type="button" ng-disabled="mainCtrl.currentPage + 1 >= mainCtrl.posts.length/mainCtrl.pageSize" ng-click="mainCtrl.pageNext()" class="btn btn-default">Older&rarr;</button></li>
+			  </ul>
+			</nav>
+		</div>
+		<div ng-if="!mainCtrl.hasPosts()">
+			<div class="center-block col-md-2">No posts!</div>
+		</div>
+	</div>
+</div>

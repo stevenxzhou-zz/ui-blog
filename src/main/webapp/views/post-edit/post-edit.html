@@ -1,0 +1,28 @@
+<!--
+/**
+ * Author: Steven Zhou
+ * Date: 6-20-2016
+ * Description: Post edit modal html.
+ */
+-->
+<div id="post-edit">
+	<form ng-submit="postEditCtrl.Post()">
+		<div class="modal-header">
+	    <h3 class="modal-title">{{postEditCtrl.actionTitle}} Post</h3>
+		</div>
+		<div class="modal-body">
+			<div class="input-group">
+			  <input type="text" class="form-control" placeholder="Title" ng-model="postEditCtrl.post.title" aria-describedby="post-title" maxlength="90" required>
+			</div>
+			<div class="input-group">
+				<!-- A rich editor here won't work with angular bootstrap modal. So use textarea instead.-->
+		  		<!-- <trix-editor angular-trix name="content" ng-model="postEditCtrl.post.text" class="trix-content"></trix-editor> -->
+		  		<textarea class="form-control" rows="5" id="comment" ng-model="postEditCtrl.post.text" required></textarea>
+		  	</div>
+		</div>
+		<div class="modal-footer">
+		    <button class="btn btn-primary" type="submit">Submit</button>
+		    <button class="btn btn-warning" type="button" ng-click="postEditCtrl.Cancel()">Cancel</button>
+		</div>
+	</form>
+</div>
